@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+    <!-- SELECTORES BÁSICOS -->
+    <style>
+        /* Selector Universal = Afecta a todo el documento. */ 
+        * {
+            background-color: papayawhip;
+        }
+        /* Selector de tipo = Afecta a todos los elementos del tipo seleccionado. */
+        div {
+            background-color: pink;
+        }
+        /* Selector de clase = Afecta a todos los elementos que su class sea la especificada */
+        .titleClass {
+            color: blueviolet;
+        }
+        /* Selector de ID = Afecta a todos los elementos que su id sea el especificado */
+        #titleId {
+            color: brown;
+        }
+        /* Selector de Atributo = Afecta a todos los elementos del tipo que su atributo sea el especificado */
+        a[href="https://www.platzi.com/home"] {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="titleClass">Hola</div>
+    <div id="titleId">Mundo</div>
+    <a href="https://www.platzi.com/home">Go to Platzi!</a>
+</body>
+</html>
