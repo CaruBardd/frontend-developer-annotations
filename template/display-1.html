@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Display</title>
+    <!-- 
+
+        TIPOS DE DISPLAY
+        El tipo de visualización que tienen los elementos:
+        -   Block           - 
+        -   Inline          -
+        -   inline-block    -
+        -   flex            -
+        -   grid            -
+
+    -->
+    <style>
+        body {
+            margin: 0;
+        }
+        /* Los elementos en bloque pueden alterar su alto, ancho, margen y padding */ 
+        div {
+            background-color: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 15px;
+        }
+        /* Los elementos en linea pueden alterar su margen y padding */ 
+        a {
+            background-color: skyblue;
+            margin: 20px;
+            padding: 15px;
+        }
+        /* Los elementos inline-block tienen las características de ambos */
+        button {
+            border-radius: 15px;
+            border: 0ch;
+            color: aliceblue;
+            background-color: slateblue;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 15px;
+        }
+        button:hover {
+            background-color: blueviolet;
+            color: white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        bloque
+    </div>
+    <a href="/">Inline</a>
+    <button>inline-block</button>
+</body>
+</html>
