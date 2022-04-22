@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <style>
+        p {
+            color: salmon;
+        }
+        input {
+            width: 20%;
+            height: max-content;
+            border: 0;
+            border-radius: 15px;
+            background-color: gainsboro;
+            overflow-y: hidden;
+        }
+
+        p::first-letter {
+            color: teal;
+        }
+        p::before {
+            content: "💕";
+        }
+        p::after {
+            content: "😊";
+        }
+        p:hover {
+            color: blueviolet
+        }
+        div p:nth-child(2) {
+            color: violet
+        }
+        ::placeholder {
+            color: darkred;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p> <!-- Segundo hijo de Div -->
+        <p>Lo mejor</p>
+    </div>
+    <input type="text" placeholder="Digita tu nombre 😎" name="nameInput" id="nameInput">
+</body>
+</html>
