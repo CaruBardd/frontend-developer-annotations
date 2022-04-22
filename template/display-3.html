@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Display - Grid</title>
+    <!-- 
+
+        TIPOS DE DISPLAY
+        El tipo de visualización que tienen los elementos:
+        -   Block           - 
+        -   Inline          -
+        -   inline-block    -
+        -   flex            -
+        -   grid            -
+
+        Al seleccionar un display grid, ésta se va a ordenar automáticamente en línea.
+        Para definir los parámetros de grid, se usan:
+        -   grid-template-columns
+        -   grid-template-rows
+        Si solamente se define uno, el otro parámetro se definirá de manera automática a partir de la cantidad e items que se tengan dentro.
+        Es decir que si yo creo un grid con repeat 4 columnas de 1fr (1 fracción) cada una, pero tengo 9 items, grid creará automáticamente 3 filas donde
+        las dos primeras contendrán 4 items cada una, y la últma contendrá uno.
+
+        Para indicarle a un item el lugar donde se debe ubicar en grid, se debe usar
+        - grid-column
+        - grid-row
+        Si no se asigna, grid lo asigna automáticamente en el siguiente espacio vacío dentro de grid.
+        Cualquiera de los parámetros lleva dos valores: inicio / fin 
+        donde inicio indica el fragmento inicial a partir del eje seleccionado, y fin será donde termina.
+
+        EJEMPLO:
+        Tengo un grid de 5x5, quiero ubicar un item en el centro de todo el grid y otro en la última fila, en la última columna, sería:
+        #item-1 {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        #item-2 {
+            grid-column: 5 / 6;
+            grid-row: 5 / 6;
+        }
+
+    -->
+    <style>
+        .container {
+            display: grid;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 10px;
+            background-color: papayawhip;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+        .item {
+            background-color: pink;
+        }
+        .container .item:nth-child(1) {
+            grid-column: 1 / 2;
+        }
+        .container .item:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .container .item:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 3/4;
+        }
+        .container .item:nth-child(4) {
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

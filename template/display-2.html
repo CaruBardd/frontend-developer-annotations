@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Display - FlexBox</title>
+    <!-- 
+
+        TIPOS DE DISPLAY
+        El tipo de visualización que tienen los elementos:
+        -   Block           - 
+        -   Inline          -
+        -   inline-block    -
+        -   flex            -
+        -   grid            -
+
+        Cada que exista un padre, se le debe indicar el tipo de display: flex; para agregar las propiedades a éste.
+
+    -->
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: papayawhip;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            padding: 5%;
+        }
+        .item {
+            width: 30px;
+            height: 30px;
+            background-color: purple;
+        }
+        .container .item:nth-child(2n + 1) {
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
