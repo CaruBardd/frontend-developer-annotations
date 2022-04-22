@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad en CSS</title>
+    <!--
+
+    ESPECIFICIDAD :
+    Va a prevalecer el estilo que tenga mayor prioridad
+    -   X 0 0 0 0 | !IMPORTANT                          | 10.000
+    -     X 0 0 0 | Estilos en línea                    |  1.000
+    -       X 0 0 | #ID                                 |    100
+    -         X 0 | Clases, Atributos y Pseudoclases    |     10
+    -           X | Elementos y pseudoelementos         |      1
+    -           0 | Selector Universal                  |      0
+
+    EJEMPLO:
+
+    #id h1::first-letter:               p .sidemenu div:hover
+        1 0 0   | #id                           1   | p
+            1   | h1                          1 0   | .sidemenu
+            1   | ::first-letter                1   | div
+                |                             1 0   | :hover
+    + ___________                       + ___________
+        1 0 2   | MÁS ESPECÍFICO              2 2   | MENOS ESPECÍFICO
+
+    -->
+    <style>
+        #platzi {
+            color: red;
+        }
+        .master {
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="platzi" class="master">
+        Platzi
+    </div>
+</body>
+</html>
