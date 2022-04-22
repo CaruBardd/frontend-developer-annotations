@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores 2 CSS</title>
+    <!-- SELECTORES COMBINADORES -->
+    <style>
+        .platzi {
+            background-color: red;
+        }
+
+        /* DESCENDIENTES - Hijos descendientes, selector de tipo (espacio) selector de tipo. */
+        div p {
+            color: lime;
+        }
+        /* HIJO DIRECTO - Selector de tipo > selector de tipo. */
+        div > div {
+            background-color: plum;
+        }
+        /* ELEMTO ADYACENTE - Selector de tipo + Selector de tipo. Uno bajo el otro.*/
+        div + section {
+            background-color: palevioletred;
+        }
+        /* GENERAL DE HERMANOS - Selector de tipo ~ Selector de tipo. */
+        div ~ p {
+            color: powderblue;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+   <div class="platzi">
+       <p>Platzi</p>
+       <p>Es</p>
+       <p>Increible</p>
+       <div>
+           Con una excelente comunidad
+       </div>
+   </div>
+   <p> Clase de selectores</p>
+   <p> Estos párrafos son hermanos de div</p>
+   <section>
+       Es lo mejor
+   </section>
+   <div>
+       Master
+   </div>
+</body>
+</html>
