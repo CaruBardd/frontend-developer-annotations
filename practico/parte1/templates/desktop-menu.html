@@ -25,17 +25,50 @@
         body {
             /* Implementación de Quicksand de Google Fonts */ 
             font-family: 'Quicksand', sans-serif;
-            margin: 0;
+            margin: 10;
         }
         .desktop-menu {
-            width: 100px;
+            width: 150px;
             height: auto;
             border: 1px solid var(--very-light-pink);
             border-radius: 6px;
         }
         .desktop-menu ul{
+            display: flex;
+            flex-direction: column;
             list-style: none;
-            padding: 0;
+            padding-inline: 16px;
+            padding-block: 16px;
+            margin: 0px;
+        }
+        .desktop-menu ul li{
+            text-align: right;
+            padding-block: 12px;
+        }
+        .desktop-menu ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: var(--lg);
+            color: var(--dark);
+
+        }
+        .desktop-menu ul li:nth-child(3) {
+            padding-block: 4px;
+        }
+        .desktop-menu ul li:nth-child(4) {
+            padding-top: 4px;
+            padding-top: 8px;
+        }
+        .desktop-menu ul li:nth-child(4) a {
+            font-size: var(--sm);
+            color: var(--hospital-green);
+            font-weight: 600;
+        }
+        .desktop-menu ul hr {
+            align-self: center;
+            border: 0px;
+            height: 1px;
+            background-color: var(--very-light-pink);
         }
     </style>
 </head>
@@ -49,7 +82,9 @@
                 <li>
                     <a href="/" class="title" id="account">My account</a>
                 </li>
-                <hr>
+                <li>
+                    <hr>
+                </li>
                 <li>
                     <a href="/" class="title" id="signout">Sign out</a>
                 </li>
