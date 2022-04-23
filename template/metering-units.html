@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida</title>
+    <!--
+
+        UNIDADES DE MEDIDA
+        Existen de tipo absolutas (px, pt, pc, in, cm, mm), y de tipo relativas (rem, em, vw, vh, vmin, vmax, ex, ch, %).
+
+        Las absolutas no dependen de ningún otro valor para ser ellas.
+
+        Las relativas dependen de otros valores a partir de la pantalla.
+        Para convertir el font-size default de 16px a 10px, se puede usar html { font-size: 62.5%; } para así luego poder usar la unidad:
+        -rem        - Equivale al pixelaje de la fuente por defecto (16px default)
+        Sabiendo que 1rem = 10px.
+
+        - vh        - Equivale al porcentaje respecto al total del alto de la pantalla.
+        - vw        - Equivale al porcentaje respecto al total del ancho de la pantalla.
+
+    -->
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            margin: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        p {
+            font-size: 3.5rem;
+        }
+        .container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+        <div>Platzi</div>
+        <p>Master</p>
+    <div class="container"></div>
+</body>
+</html>
