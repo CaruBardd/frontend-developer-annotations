@@ -37,15 +37,11 @@
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
-        .logo {
-            width: 150px;
-            margin-bottom: 48px;
-            justify-self: center;
-        }
         .title {
             font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
+            margin-top: 12vh;
+            margin-bottom: 48px;
+            text-align: left;
         }
         .form {
             display: flex;
@@ -64,6 +60,9 @@
             font-size: var(--md);
             padding: 8px;
             margin-bottom: 12px;
+        }
+        .input-password {
+            margin-bottom: 20vh;
         }
         .primary-button {
             background-color: var(--hospital-green);
@@ -92,7 +91,6 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="../assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
             <h1 class="title">Create a new account</h1>
             <form action="/" class="form">
                 <label for="name" class="label">Name</label>
