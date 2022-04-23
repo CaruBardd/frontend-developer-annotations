@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colapso de márgenes</title>
+    <!--
+    
+        COLAPSO DE MARGENES SIN/CON CONTENEDORES
+
+        Las margin se van a colapsar en elementos bloques en el eje vertical.
+        
+        El colapso de márgenes no sucede dentro de contenedores flex o grid, pese a que se repita el mismo caso.
+    
+    -->
+    <style>
+        .container {
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid {
+            background-color: aliceblue;
+            display: grid;
+        }
+        div {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>Platzi</div>
+        <div>Master</div>
+    </section>
+    <section class="grid">
+        <div>Platzi</div>
+        <div>Community</div>
+    </section>
+</body>
+</html>
