@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index y contexto de apilamiento</title>
+    <!--
+
+        Z INDEX:
+        Se refiere al eje que existe entre la página web y el usuario (Como si la página fuera un contenedor 3D detrás de la pantalla).
+        Elemento de HTML uno encima de otro.
+
+        El orden de HTML define al eje Z
+        Los elementos escritos de últimas serán que estén por encima de los demás.
+
+        Al usar propiedad z-index, se establece el orden de las capas y la posición de cada elemento.
+        z-index solamente funciona con ciertos position.
+        Entre más alto el index, más cerca de la pantalla estará.
+        Si un padre tiene un z index menor que el hijo, el hijo, pese a que su z index sea mayor, se mantendrá igual que el del padre
+        y solamente podrá estar por encima de su padre.
+
+    -->
+    <style>
+        div {
+            position: absolute;
+            background-color: palegoldenrod;
+        }
+        .one {
+            z-index: 5;
+        }
+        .two {
+            z-index: 4;
+        }
+        .r {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            z-index: 5;
+        }
+        .b {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            z-index: 3;
+        }
+        .y {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">Master</div>
+    <div class="two">Platzi</div>
+
+    <section>
+        <div class="r">Red</div>
+        <div class="b">
+            Blue
+            <div class="y">Yellow</div>
+        </div>
+    </section>
+</body>
+</html>
