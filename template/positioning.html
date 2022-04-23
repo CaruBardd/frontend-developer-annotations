@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento CSS</title>
+    <!--
+
+        POSICIONAMIENTO DE ELEMENTOS EN CSS
+
+        Los valores de posicionamiento ayudan a ubicar un elemento dentro de su contenedor.
+        Existen distintos valores:
+        - relative  - Alinear los elementos dentro de sí
+        - absolute  - El elemento solamente se podrá mover DENTRO de su contenedor (Convierte su contenedor en el 100% del espacio)
+        - fixed     - Se quedará fijo en la pantalla, aún si se realiza scroll
+        - sticky    - Si tiene hermanos, al hacer scroll, se quedará presente hasta que un hermano llegue a su posición
+        - static    - Valor por defecto
+        - initial   - Valor de posición inicial (Si ha sido alterada)
+        - inherital - Recibe la posición por herencia del padre
+
+    -->
+    <style>
+        body {
+            margin: 0;
+        }
+        nav {
+            width: 100%;
+            height: 60px;
+            background-color: lightcyan;
+            position: fixed;
+            top: 0;
+        }
+        ul p{
+            position: sticky;
+        }
+        ul li {
+            position: sticky;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: peachpuff;
+            position: relative;
+            top: 20px;
+        }
+        .item {
+            width: 20px;
+            height: 20px;
+            background-color: hotpink;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta magna non urna ornare, ut consequat diam auctor. In mollis pharetra arcu, ac ornare sapien feugiat id. Sed eleifend, risus nec placerat congue, neque felis bibendum eros, id aliquet augue ex non tortor. Ut posuere nulla eu ante venenatis, tincidunt fringilla odio ullamcorper. Curabitur cursus lobortis mattis. Sed turpis ex, lobortis sed porta ut, vulputate nec nunc. Sed et luctus odio. Nunc rhoncus, libero sed lacinia facilisis, purus metus convallis sem, eu tincidunt lacus mi sed risus. Morbi porta nibh et finibus aliquam. Duis pretium consequat nibh in euismod. Donec vel neque malesuada, convallis felis eu, sollicitudin odio.
+
+        Nullam condimentum ligula nec metus rutrum fermentum. Quisque nec velit id justo ultricies lobortis vitae sit amet metus. Mauris maximus nulla augue, a imperdiet sapien accumsan eu. Suspendisse potenti. Ut sit amet laoreet sem. Suspendisse potenti. Quisque purus nulla, gravida et est sit amet, congue blandit ex. Vivamus non leo dapibus, sagittis purus ut, volutpat erat. Mauris ut maximus orci. Suspendisse imperdiet, ex at rutrum tincidunt, urna nisi ultricies risus, et dictum urna neque a lorem. Sed vitae auctor augue. Nam mi arcu, mollis vitae sodales vitae, pretium non erat. Etiam vulputate consectetur egestas. Aenean a finibus tellus. Donec placerat venenatis consectetur.
+
+        Cras sagittis eget purus ut auctor. Phasellus egestas eget felis luctus dapibus. Aenean quis semper tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In pellentesque nulla eu consectetur finibus. Sed gravida purus sit amet congue ultrices. Phasellus ornare magna rhoncus metus euismod, vel tincidunt ipsum porta. Curabitur ultricies turpis eu felis tincidunt mattis. Donec iaculis pretium nisi, at dictum justo tincidunt ac. Donec imperdiet neque quis lorem gravida elementum. Integer accumsan aliquet volutpat. Cras at nibh eros. Quisque quis est dolor. Nulla suscipit est malesuada ligula ornare, in tempus nibh congue. Quisque at elit libero. Etiam et tellus et dui vulputate euismod vitae quis velit.
+
+        Donec tristique sed risus ut iaculis. Nulla facilisi. Phasellus commodo finibus orci, at pharetra ligula suscipit sed. Maecenas nec nunc auctor, rutrum dui sed, porta metus. Curabitur nec consectetur mauris, eget aliquet nulla. Aenean eu egestas turpis, at pharetra felis. Aliquam vehicula est metus, quis bibendum felis sollicitudin sit amet. Vestibulum tincidunt ante et condimentum dapibus. Vivamus ultricies arcu in dignissim hendrerit. Nam eu odio ullamcorper ipsum varius sodales nec quis tellus. Morbi non purus congue, maximus velit a, semper diam. Sed ut massa purus.
+
+        Nullam et efficitur libero, ac dignissim nunc. Etiam molestie, mauris et mollis consequat, nisl ante consectetur lorem, fringilla tristique libero enim ac purus. Quisque volutpat nibh ante, sit amet lacinia eros malesuada sit amet. Nullam erat ipsum, euismod non varius ac, facilisis eget neque. Integer eget suscipit eros, eget feugiat eros. Cras sodales erat vel finibus ornare. Ut vestibulum, eros dapibus rutrum bibendum, lacus nibh volutpat lorem, vitae laoreet eros arcu non ante. In vel ultricies est. Fusce ipsum turpis, suscipit nec urna et, posuere feugiat turpis. Suspendisse potenti. Proin ut libero eget lorem finibus imperdiet id nec elit. Mauris tristique quam scelerisque egestas lacinia.
+    </p>
+    <ul>
+        <p>Frutas</p>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+    <ul>
+        <p>Frutas</p>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+</html>
