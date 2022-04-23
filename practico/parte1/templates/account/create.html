@@ -38,12 +38,15 @@
             width: 300px;
         }
         .title {
-            font-size: var(--lg);
-            margin-top: 12vh;
+            font-size: var(--lg);;
             margin-bottom: 48px;
-            text-align: left;
+            text-align: start;
         }
         .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .formInputs {
             display: flex;
             flex-direction: column;
         }
@@ -59,7 +62,7 @@
             height: 32px;
             font-size: var(--md);
             padding: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 26px;
         }
         .input-password {
             margin-bottom: 20vh;
@@ -93,12 +96,14 @@
         <div class="form-container">
             <h1 class="title">Create a new account</h1>
             <form action="/" class="form">
-                <label for="name" class="label">Name</label>
-                <input type="text" id="name" placeholder="Diego Hernandez" class="input input-name">
-                <label for="email" class="label">Email address</label>
-                <input type="text" id="email" placeholder="user@shop.yardsale.com" class="input input-email">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
+                <div class="formInputs">
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" placeholder="Diego Hernandez" class="input input-name">
+                    <label for="email" class="label">Email address</label>
+                    <input type="text" id="email" placeholder="user@shop.yardsale.com" class="input input-email">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" id="password" placeholder="*********" class="input input-password">
+                </div>
             </form>
             <button class="primary-button login-button">Create</button>
         </div>
