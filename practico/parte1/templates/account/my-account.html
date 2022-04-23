@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YardSale - Create new account</title>
+    <title>YardSale - My account</title>
     <style>
         :root {
             /* Creación de variables con paleta de colores pre-establecida */
@@ -55,8 +55,8 @@
             font-weight: bold;
             margin-bottom: 4px;
         }
-        .input {
-            background-color: var(--text-input-field);
+        .p-value {
+            color: var(--very-light-pink);
             border: none;
             border-radius: 8px;
             height: 32px;
@@ -64,7 +64,7 @@
             padding: 8px;
             margin-bottom: 26px;
         }
-        .input-password {
+        .p-password {
             margin-bottom: 20vh;
         }
         .primary-button {
@@ -78,13 +78,24 @@
             font-weight: bold;
             height: 48px;
         }
+        .secondary-button {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
         .login-button {
             margin-top: 12px;
             margin-bottom: 32px;
         }
         
         @media (min-width: 640px) {
-            .input-password {
+            .p-password {
                 margin-bottom: 48px;
             }
         }
@@ -94,18 +105,21 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <h1 class="title">Create a new account</h1>
+            <h1 class="title">My account</h1>
             <form action="/" class="form">
                 <div class="formInputs">
                     <label for="name" class="label">Name</label>
-                    <input type="text" id="name" placeholder="Diego Hernandez" class="input input-name">
+                    <p class="p-value p-name" id="name">Diego Hernadez</p>
+                    <!--<input type="text" id="name" placeholder="Diego Hernandez" class="input input-name">-->
                     <label for="email" class="label">Email address</label>
-                    <input type="text" id="email" placeholder="user@shop.yardsale.com" class="input input-email">
+                    <p class="p-value p-email" id="email">user@shop.yardsale.com</p>
+                    <!--<input type="text" id="email" placeholder="user@shop.yardsale.com" class="input input-email">-->
                     <label for="password" class="label">Password</label>
-                    <input type="password" id="password" placeholder="*********" class="input input-password">
+                    <p class="p-value p-password" id="password">*********</p>
+                    <!--<input type="password" id="password" placeholder="*********" class="input input-password">-->
                 </div>
             </form>
-            <button class="primary-button login-button">Create</button>
+            <button class="secondary-button login-button">Edit</button>
         </div>
     </div>
 </body>
