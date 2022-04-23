@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Importación de Quicksand Light 300, Medium 500, Bold 700-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YardSale - Desktop Menu</title>
+    <style>
+        :root {
+            /* Creación de variables con paleta de colores pre-establecida */
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            /* Implementación de Quicksand de Google Fonts */ 
+            font-family: 'Quicksand', sans-serif;
+            margin: 10;
+        }
+        .desktop-menu {
+            width: 150px;
+            height: auto;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 6px;
+        }
+        .desktop-menu ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding-inline: 16px;
+            padding-block: 16px;
+            margin: 0px;
+        }
+        .desktop-menu ul li{
+            text-align: right;
+            padding-block: 12px;
+        }
+        .desktop-menu ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: var(--lg);
+            color: var(--dark);
+
+        }
+        .desktop-menu ul li:nth-child(3) {
+            padding-block: 4px;
+        }
+        .desktop-menu ul li:nth-child(4) {
+            padding-top: 4px;
+            padding-top: 8px;
+        }
+        .desktop-menu ul li:nth-child(4) a {
+            font-size: var(--sm);
+            color: var(--hospital-green);
+            font-weight: 600;
+        }
+        .desktop-menu ul hr {
+            align-self: center;
+            border: 0px;
+            height: 1px;
+            background-color: var(--very-light-pink);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="desktop-menu">
+            <ul>
+                <li>
+                    <a href="/" class="title" id="order">My orders</a>
+                </li>
+                <li>
+                    <a href="/" class="title" id="account">My account</a>
+                </li>
+                <li>
+                    <hr>
+                </li>
+                <li>
+                    <a href="/" class="title" id="signout">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
