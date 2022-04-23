@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja</title>
+    <!--
+
+        El modelo de caja significa que cada elemento tiene varias capas: 
+        - Box       - Es el contenido de la caja
+        - Padding   - Es el borde interior entre el contenido de la caja y el borde
+        - Border    - El borde de la caja
+        - Margin    - Margen exterior de la caja
+        Para cambiar el tamaño de la caja se utiliza width y height, pero si alteramos su valor y luego cambiamos el padding o el border, el tamaño
+        de la caja será mayor que el asignado previamente, para evitar ello, se utiliza
+        - box-sizing: border-box;
+        De este modo, si, por ejemplo, asignamos 200 px a cada lado, un padding de 10 px y un borde de 1px, el tamaño de box no será 200, éste se 
+        reasignará dinámicamente y será de 178 x 178 px, dejando así, por cada lado, 20 px para un padding por cada extremo y 2 px para borde x extremo.
+
+        Los margin en vertical se van unir con otros margin de otros elementos.
+
+    -->
+    <style>
+        div {
+            width: 20px;
+            height: 20px;
+            background-color: plum;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid hotpink;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div>Platzi</div>
+   <div>Es lo máximo</div>
+</body>
+</html>
