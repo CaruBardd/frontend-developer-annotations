@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades más usadas de CSS</title>
+    <!--
+
+        PROPIEDADES DE CSS MÁS UTILIZADAS
+
+        LAYOUT:             COLORES DE FONDO:
+        - Display           - Background
+                            - Background-color
+        TEXTOS:
+        - Font-size         TAMAÑOS:
+        - Font-weight       - Width
+        - Font-family       - Height
+        - Text-align
+        - Color
+        
+        MODELO DE CAJA:
+        - Margin
+        - Padding
+        - Border
+
+        Con overflow indicamos el comportamiento ante todo lo que se salga del contenedor. 
+
+    -->
+    <style>
+        section {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+        .card {
+            margin: 5px;
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            width: 200px;
+            height: 200px;
+            background-color: papayawhip;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid orangered;
+        }
+        .card img {
+            grid-row: 1/5;
+            height: 100%;
+            width: 100%;
+            margin-top: 0px;
+            overflow: hidden;
+        }
+        .card h6 {
+            padding-top: 10px;
+            padding-bottom: 5px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+            background-color: lightpink;
+            color: firebrick;
+        }
+        .cardInfo {
+            padding-inline: 10px;
+            padding-block: 2px;
+            align-items: center;
+        }
+        .cardInfo p {
+            color: orangered;
+            font-family: 'Comic Sans MS';
+            font-size: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Sleeping Tiny Cat">
+            <h6>Cat: Sleepy</h6>
+            <div class="cardInfo">
+                <p>Un gato durmiendo tiernamente, lo suficiente para hacerte feliz por el resto de tu vida</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg" alt="White Cat">
+            <h6>White Cat</h6>
+            <div class="cardInfo">
+                <p>Un gato contemplando atentamente desde sus majestuosos ojos azules.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Yummy Cat">
+            <h6>Yummy Cat</h6>
+            <div class="cardInfo">
+                <p>Un gato lamiéndose la pata intensamente, como si no hubiese un mañana.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/209037/pexels-photo-209037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Meditation Cat">
+            <h6>Meditation Cat</h6>
+            <div class="cardInfo">
+                <p>Un gato meditando desde lo más profundo de sus entrañas para que su dueño sea feliz.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Requesting Cat">
+            <h6>Food Requesting Cat</h6>
+            <div class="cardInfo">
+                <p>Un gato pidiendo comida para llenar su pancita de mucha salud y bienestar para vivir mil años más.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
