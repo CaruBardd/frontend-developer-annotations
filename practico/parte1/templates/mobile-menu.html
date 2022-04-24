@@ -27,6 +27,40 @@
             font-family: 'Quicksand', sans-serif;
             margin: 0;
         }
+        .mobile-menu {
+            padding: 32px;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+        }
+        .mobile-menu ul {
+            padding: 0px;
+            margin: 24px 0px 0px;
+            list-style: none;
+        }
+        .mobile-menu ul:nth-child(2) {
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .mobile-menu ul li {
+            margin-bottom: 32px;
+        }
+        .mobile-menu .email a{
+            font-size: var(--sm);
+            font-weight: 400 !important;
+        }
+        .sign a {
+            color: var(--hospital-green);
+            font-size: var(--sm);
+        }
+        .mobile-menu .sign-list .email {
+            margin: 0px;
+        }
+        .mobile-menu .sign-list {
+            position: absolute;
+            bottom: 0px;
+        }
     </style>
 </head>
 <body>
@@ -54,8 +88,9 @@
                 <a href="/">Others</a>
             </li>
         </ul>
-        <hr>
-        <ul class="account-dashboard">
+        <ul>
+        </ul>
+        <ul class="account-list">
             <li class="account-option">
                 <a href="/">My orders</a>
             </li>
@@ -63,7 +98,7 @@
                 <a href="/">My account</a>
             </li>
         </ul>
-        <ul class="sign-options">
+        <ul class="sign-list">
             <li class="email">
                 <a href="/">diego35andres199@gmail.com</a>
             </li>
